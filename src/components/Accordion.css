@@ -1,0 +1,35 @@
+.accordion .title {
+  /* Grows from 16 to 18px */
+  font-size: clamp(1rem, 0.8283rem + 0.7326vw, 1.125rem);
+  font-weight: 600;
+  line-height: normal;
+}
+
+.accordion button {
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+/**
+ * Add simple animation to show/hide panels
+ * https://www.youtube.com/watch?v=B_n4YONte5A
+ */
+.accordion .panel {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 200ms;
+}
+
+.accordion .panel[aria-hidden='true'] {
+  grid-template-rows: 0fr;
+}
+
+.accordion .panel p:first-child {
+  margin-block-start: 24px;
+}
+
+.accordion .panel p {
+  /* Grows from 14 to 16px */
+  font-size: clamp(0.875rem, 0.7033rem + 0.7326vw, 1rem);
+}
