@@ -3,6 +3,7 @@
   font-size: clamp(1rem, 0.8283rem + 0.7326vw, 1.125rem);
   font-weight: 600;
   line-height: normal;
+  margin-block-start: 0;
 }
 
 .accordion button {

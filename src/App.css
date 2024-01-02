@@ -14,8 +14,37 @@ body {
   color: hsl(var(--clr-dark-purple));
 }
 
-ul {
+main {
+  padding-inline: 24px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #fff;
+  /* Grows from 24 to 40px */
+  padding: clamp(1.5rem, 0.1264rem + 5.8608vw, 2.5rem);
+  /* Grows from 8 to 15px */
+  border-radius: clamp(0.5rem, -0.101rem + 2.5641vw, 0.9375rem);
+}
+
+.container ul {
   padding-inline-start: 0;
+  /* Grows from 24 to 30px */
+  margin-block-start: clamp(1.5rem, 0.9849rem + 2.1978vw, 1.875rem);
+  margin-block-end: 0;
+}
+
+.container ul li + li::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  /* Grows from 19-23px so distance between accordions grows from 40-48px */
+  margin-block: clamp(1.1875rem, 0.8441rem + 1.4652vw, 1.4375rem);
+  background-color: #fcfcfe;
 }
 
 h1 {
@@ -25,6 +54,7 @@ h1 {
   align-items: center;
   gap: 24px;
   line-height: normal !important;
+  margin-block-start: 0;
 }
 
 h1 .icon-star {
