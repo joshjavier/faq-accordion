@@ -17,3 +17,20 @@ body {
 ul {
   padding-inline-start: 0;
 }
+
+h1 {
+  /* Grows from 32 to 56px */
+  font-size: clamp(2rem, -0.0604rem + 8.7912vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  line-height: normal !important;
+}
+
+h1 .icon-star {
+  width: clamp(1.5rem, 0.1264rem + 5.8608vw, 2.5rem);
+}
+
+h1 abbr {
+  text-decoration: none;
+}
