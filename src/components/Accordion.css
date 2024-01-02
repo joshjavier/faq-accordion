@@ -35,19 +35,19 @@
 }
 
 .accordion button svg {
-  fill: #301534; /* 2 */
+  fill: #ad28eb; /* 2 */
   flex-shrink: 0;
 }
 
 .accordion button[aria-expanded='true'] svg {
-  fill: #ad28eb; /* 3 */
+  fill: #301534; /* 3 */
 }
 
-.accordion button[aria-expanded='true'] svg > :nth-child(2) {
+.accordion button[aria-expanded='false'] svg > :nth-child(2) {
   transform: rotate(-90deg); /* 4 */
 }
 
-.accordion button[aria-expanded='true'] svg > :nth-child(3) {
+.accordion button[aria-expanded='false'] svg > :nth-child(3) {
   transform: rotate(-180deg); /* 4 */
 }
 
