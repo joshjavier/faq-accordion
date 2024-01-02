@@ -7,8 +7,46 @@
 
 .accordion button {
   border: none;
+  padding: 0;
   background: transparent;
   text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.accordion button:hover {
+  color: #ad28eb;
+}
+
+/**
+ * 1. Set a nice transition duration.
+ * 2. Set fill for collapsed state.
+ * 3. Set fill for expanded state.
+ * 4. Animate between the minus and plus icon on state change.
+ */
+.accordion button svg > * {
+  transition: all 300ms; /* 1 */
+}
+
+.accordion button svg {
+  fill: #301534; /* 2 */
+  flex-shrink: 0;
+}
+
+.accordion button[aria-expanded='true'] svg {
+  fill: #ad28eb; /* 3 */
+}
+
+.accordion button[aria-expanded='true'] svg > :nth-child(2) {
+  rotate: -90deg; /* 4 */
+}
+
+.accordion button[aria-expanded='true'] svg > :nth-child(3) {
+  rotate: -180deg; /* 4 */
 }
 
 /**

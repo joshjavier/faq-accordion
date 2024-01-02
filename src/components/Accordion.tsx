@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import IconToggle from '../icons/IconToggle';
 import { FAQ } from '../definitions';
 import './Accordion.css';
 
@@ -11,7 +12,8 @@ function Accordion({ faq, open = false }: { faq: FAQ; open?: boolean }) {
       <div className="trigger">
         <h3 className="title">
           <button aria-expanded={isOpen} onClick={() => setOpen((o) => !o)}>
-            {question}
+            <span>{question}</span>
+            <IconToggle />
           </button>
         </h3>
       </div>
