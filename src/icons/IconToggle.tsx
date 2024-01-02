@@ -1,4 +1,6 @@
 function IconToggle() {
+  const style = { transformOrigin: 'center' };
+
   return (
     <svg viewBox="0 0 30 30" width="30" aria-hidden="true">
       <circle cx="15" cy="15" r="12.188" />
@@ -7,14 +9,14 @@ function IconToggle() {
         stroke="white"
         strokeLinecap="round"
         strokeWidth="1.875"
-        transform-origin="center"
+        style={style}
       />
       <polyline
         points="10.313,15 19.687,15"
         stroke="white"
         strokeLinecap="round"
         strokeWidth="1.875"
-        transform-origin="center"
+        style={style}
       />
     </svg>
   );

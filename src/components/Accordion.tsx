@@ -10,12 +10,12 @@ function Accordion({ faq, open = false }: { faq: FAQ; open?: boolean }) {
   return (
     <article className="accordion">
       <div className="trigger">
-        <h3 className="title">
+        <h2 className="title">
           <button aria-expanded={isOpen} onClick={() => setOpen((o) => !o)}>
             <span>{question}</span>
             <IconToggle />
           </button>
-        </h3>
+        </h2>
       </div>
       <div className="panel" aria-hidden={!isOpen}>
         <div style={{ overflow: 'hidden' }}>
