@@ -16,13 +16,23 @@ body {
 
 main {
   padding-inline: 24px;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+  padding-block-start: clamp(8.875rem, 6.6429rem + 9.5238vw, 10.5rem);
+  padding-block-end: 142px;
+  background-image: url('/images/background-pattern-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-width: 517px) {
+  main {
+    background-image: url('/images/background-pattern-desktop.svg');
+    background-size: auto;
+  }
 }
 
 .container {
   max-width: 600px;
+  margin-inline: auto;
   background-color: #fff;
   /* Grows from 24 to 40px */
   padding: clamp(1.5rem, 0.1264rem + 5.8608vw, 2.5rem);

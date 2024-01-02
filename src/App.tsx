@@ -12,9 +12,9 @@ function App() {
           <abbr title="Frequently Asked Questions">FAQs</abbr>
         </h1>
         <ul role="list">
-          {faqs.map((faq) => (
+          {faqs.map((faq, index) => (
             <li key={faq.id}>
-              <Accordion faq={faq} />
+              <Accordion faq={faq} open={index === 0} />
             </li>
           ))}
         </ul>
