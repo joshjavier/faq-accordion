@@ -17,6 +17,7 @@
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
+  color: inherit;
 }
 
 .accordion button:hover {
@@ -43,11 +44,11 @@
 }
 
 .accordion button[aria-expanded='true'] svg > :nth-child(2) {
-  rotate: -90deg; /* 4 */
+  transform: rotate(-90deg); /* 4 */
 }
 
 .accordion button[aria-expanded='true'] svg > :nth-child(3) {
-  rotate: -180deg; /* 4 */
+  transform: rotate(-180deg); /* 4 */
 }
 
 /**
